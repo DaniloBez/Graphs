@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
@@ -24,8 +23,8 @@ namespace Курсова_робота_v2
         #region Variables
         int numberOfVertices;
         int[,] adjacencyMatrix;
-        bool[,] passedVertices;
         List<List<int>> allCycles = new List<List<int>>();
+        HashSet<List<int>> hs = new HashSet<List<int>>();
         Visualization graphVisualization;
         Algorithm graphAlgorithm;
         #endregion
@@ -52,7 +51,7 @@ namespace Курсова_робота_v2
         {
             for (int i = 1; i <= numberOfVertices; i++)
             {
-                for (int j = 1; j <= numberOfVertices; j++)                   
+                for (int j = 1; j <= numberOfVertices; j++)
                     adjacencyMatrix[i - 1, j - 1] = int.Parse(dataGridView1.Rows[i].Cells[j].Value.ToString());
             }
 
@@ -110,30 +109,39 @@ namespace Курсова_робота_v2
             sw.Start();
 
             allCycles.Clear();
+            hs.Clear();
             int x = int.Parse(textBox2.Text);
 
             if (radioButton1.Checked)
             {
                 graphAlgorithm.StartFindingCyclesRecursiveOptimized(x, numberOfVertices, adjacencyMatrix, ref allCycles);
+                ShowCyclec();
             }
             if (radioButton2.Checked)
             {
                 graphAlgorithm.StartFindingCyclesRecursive(x, numberOfVertices, adjacencyMatrix, ref allCycles);
+                ShowCyclec();
             }
             if (radioButton3.Checked)
             {
-                graphAlgorithm.FindCycles(x, numberOfVertices, adjacencyMatrix, ref allCycles);
+                graphAlgorithm.StartFindingCyclesOptimized(x, numberOfVertices, adjacencyMatrix, ref allCycles);
+                ShowCyclec();
             }
             if (radioButton4.Checked)
             {
                 graphAlgorithm.StartFindingCycles(x, numberOfVertices, adjacencyMatrix, ref allCycles);
+                ShowCyclec();
             }
-
-            ShowCyclec();
+            if (radioButton5.Checked)
+            {
+                graphAlgorithm.StartHs(x, numberOfVertices, adjacencyMatrix, ref hs);
+                ShowH();
+            }
 
             sw.Stop();
 
-            label6.Text = $"Час виконання программи: {sw.ElapsedMilliseconds} мілісекунд";
+            label6.Text = $"Час виконання программи: {sw.Elapsed.ToString("mm':'ss':'fff")}";
+
         }
 
 
@@ -158,6 +166,27 @@ namespace Курсова_робота_v2
             }
         }
 
-        #endregion
+        void ShowH()
+        {
+            listBox1.Items.Clear();
+            var displayList = new List<string>();
+            if (hs.Count == 0)
+                displayList.Add(" - ");
+            else
+            {
+                int i = 0;
+                foreach (var item in hs)
+                {
+                    item.Reverse();
+                    string s = $"{i + 1}) {String.Join(" ", item)}";
+
+                    displayList.Add(s);
+                    i++;
+                }
+            }
+            listBox1.Items.AddRange(displayList.ToArray());
+
+            #endregion
+        }
     }
 }

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Курсова_робота
 {
@@ -11,23 +8,25 @@ namespace Курсова_робота
 
         bool[,] passedVertices;
 
-        public void StartFindingCyclesRecursiveOptimized(int vertex, int numberOfVertices, int[,] adjacencyMatrix, ref List<List<int>> allCycles)
-        {
-            Stack<int> chainOfPassedVertices = new Stack<int>();
-            chainOfPassedVertices.Push(vertex);
 
-            FindingCyclesRecursiveOptimized(chainOfPassedVertices, vertex, numberOfVertices, adjacencyMatrix, ref allCycles);
+        public void StartHs(int vertex, int numberOfVertices, int[,] adjacencyMatrix, ref HashSet<List<int>> allCycles)
+        {
+            Stack<int> chainOfPassedVertices = new Stack<int>(); 
+            chainOfPassedVertices.Push(vertex); 
+
+            Hs(chainOfPassedVertices, vertex, numberOfVertices, adjacencyMatrix, ref allCycles);
         }
 
 
-        private void FindingCyclesRecursiveOptimized(Stack<int> chainOfPassedVertices, int currentVertex, int numberOfVertices, int[,] adjacencyMatrix, ref List<List<int>> allCycles)
+        private void Hs(Stack<int> chainOfPassedVertices, int currentVertex, int numberOfVertices, int[,] adjacencyMatrix, ref HashSet<List<int>> allCycles)
         {
             if (chainOfPassedVertices.Count > 2 && currentVertex == chainOfPassedVertices.ElementAt(0))
             {
+                var intListEqualityComparer = new IntListEqualityComparer();
                 var foundCycle = chainOfPassedVertices.ToList();
                 foundCycle.Reverse();
                 foundCycle.Add(foundCycle[0]);
-                if (!allCycles.Any(cycle => foundCycle.SequenceEqual(cycle)))
+                if (!allCycles.Contains(foundCycle, intListEqualityComparer))
                 {
                     foundCycle.Reverse();
                     allCycles.Add(foundCycle);
@@ -36,6 +35,44 @@ namespace Курсова_робота
 
             for (int i = 0; i < numberOfVertices; i++)
             {
+                if (adjacencyMatrix[currentVertex, i] == 1 && !chainOfPassedVertices.Contains(i))
+                {
+                    chainOfPassedVertices.Push(i);
+                    Hs(chainOfPassedVertices, i, numberOfVertices, adjacencyMatrix, ref allCycles);
+                    chainOfPassedVertices.Pop();
+                }
+            }
+        }
+
+        //Починаємо з пошуку циклів для заданої вершини графу.
+        public void StartFindingCyclesRecursiveOptimized(int vertex, int numberOfVertices, int[,] adjacencyMatrix, ref List<List<int>> allCycles)
+        {
+            Stack<int> chainOfPassedVertices = new Stack<int>(); //Створюємо стек, в якому зберігаємо вершини, які ми вже проходили.
+            chainOfPassedVertices.Push(vertex); //Додаємо поточну вершину в стек.
+
+            FindingCyclesRecursiveOptimized(chainOfPassedVertices, vertex, numberOfVertices, adjacencyMatrix, ref allCycles); // Викликаємо метод, який знаходить цикли в графі з початковою вершиною.
+        }
+
+
+        private void FindingCyclesRecursiveOptimized(Stack<int> chainOfPassedVertices, int currentVertex, int numberOfVertices, int[,] adjacencyMatrix, ref List<List<int>> allCycles)
+        {
+            //Якщо в chainOfPassedVertices є більше 2 вершин і поточна вершина currentVertex дорівнює початковій вершині, то ми знайшли цикл.
+            if (chainOfPassedVertices.Count > 2 && currentVertex == chainOfPassedVertices.ElementAt(0))
+            {
+                List<int> foundCycle = chainOfPassedVertices.ToList();//Створюємо список, куди додаємо всі вершини зі стеку.
+                foundCycle.Reverse();//еревертаємо його та додаємо до нього початкову вершину
+                foundCycle.Add(foundCycle[0]);
+                if (!allCycles.Any(cycle => foundCycle.SequenceEqual(cycle)))//Якщо такий цикл ще не доданий до списку, то додаємо його туди.
+                {
+                    foundCycle.Reverse();
+                    allCycles.Add(foundCycle);
+                }
+            }
+
+            //Перебираємо всі вершини графу 
+            for (int i = 0; i < numberOfVertices; i++)
+            {
+                //Якщо з поточної вершини є ребро до вершини "i" і ми ще не проходили через неї, то додаємо вершину "i" в стек, викликаємо метод FindingCyclesRecursiveOptimized для вершини "i", видаляємо вершину "i" зі стеку за допомогою методу Pop().
                 if (adjacencyMatrix[currentVertex, i] == 1 && !chainOfPassedVertices.Contains(i))
                 {
                     chainOfPassedVertices.Push(i);
@@ -51,16 +88,7 @@ namespace Курсова_робота
             passedVertices = new bool[numberOfVertices + 1, numberOfVertices + 1];
             var chainOfPassedVertices = new Stack<int>();
             chainOfPassedVertices.Push(vertex);
-
-            for (int i = 0; i < numberOfVertices; i++)
-            {
-                if (adjacencyMatrix[vertex, i] == 1 && !passedVertices[1, i])
-                {
-                    chainOfPassedVertices.Push(i);
-                    FindingCyclesRecursive(chainOfPassedVertices, i, vertex, numberOfVertices, adjacencyMatrix, ref allCycles);
-                    chainOfPassedVertices.Pop();
-                }
-            }
+            FindingCyclesRecursive(chainOfPassedVertices, vertex, vertex, numberOfVertices, adjacencyMatrix, ref allCycles);
         }
 
         private void FindingCyclesRecursive(Stack<int> chainOfPassedVertices, int currentVertex, int vertex_number, int numberOfVertices, int[,] adjacencyMatrix, ref List<List<int>> allCycles)
@@ -75,7 +103,7 @@ namespace Курсова_робота
 
                 for (int i = 0; i < allCycles.Count; i++)
                 {
-                    if (ListsAreEquivalent(foundCycle, allCycles[i]))
+                    if (ListsAreEquivalentOptimized(foundCycle, allCycles[i]))
                     {
                         isListsAreNotEquivalent = false;
                         break;
@@ -171,7 +199,7 @@ namespace Курсова_робота
         }
 
 
-        public void FindCycles(int vertexNumber, int numVertices, int[,] adjacencyMatrix, ref List<List<int>> allCycles)
+        public void StartFindingCyclesOptimized(int vertexNumber, int numVertices, int[,] adjacencyMatrix, ref List<List<int>> allCycles)
         {
             bool[,] passedVertices = new bool[numVertices, numVertices];
             int vertexChainDepth = 1;
@@ -211,7 +239,7 @@ namespace Курсова_робота
 
                         foreach (List<int> cycle in allCycles)
                         {
-                            if (ListsAreEquivalent2(foundCycle, cycle))
+                            if (ListsAreEquivalentOptimized(foundCycle, cycle))
                             {
                                 isListsAreNotEquivalent = false;
                                 break;
@@ -240,7 +268,7 @@ namespace Курсова_робота
             }
         }
 
-        private bool ListsAreEquivalent2(List<int> list1, List<int> list2)
+        private bool ListsAreEquivalentOptimized(List<int> list1, List<int> list2)
         {
             List<int> copyList1 = new List<int>(list1);
             List<int> copyList2 = new List<int>(list2);
@@ -248,5 +276,44 @@ namespace Курсова_робота
             return copyList1.SequenceEqual(copyList2);
         }
 
+    }
+
+    public class IntListEqualityComparer : IEqualityComparer<List<int>>
+    {
+        public bool Equals(List<int> x, List<int> y)
+        {
+            if (x == null || y == null)
+            {
+                return x == null && y == null;
+            }
+
+            if (x.Count != y.Count)
+            {
+                return false;
+            }
+
+            for (int i = 0; i < x.Count; i++)
+            {
+                if (x[i] != y[i])
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        public int GetHashCode(List<int> obj)
+        {
+            unchecked
+            {
+                int hash = 17;
+                foreach (int i in obj)
+                {
+                    hash = hash * 23 + i.GetHashCode();
+                }
+                return hash;
+            }
+        }
     }
 }
