@@ -62,16 +62,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Algorithms\Algorithm.cs" />
+    <Compile Include="Algorithms\DirectGraphAlgorithm.cs" />
+    <Compile Include="Algorithms\ICycleDetectionAlgorithm.cs" />
+    <Compile Include="Algorithms\UndirectGraphAlgorithm.cs" />
+    <Compile Include="CreateGraph\CreateCompleteGraph.cs" />
+    <Compile Include="CreateGraph\CreateEmptyGraph.cs" />
+    <Compile Include="CreateGraph\CreateRandomDirectedGraph.cs" />
+    <Compile Include="CreateGraph\CreateRandomUndirectedGraph.cs" />
+    <Compile Include="CreateGraph\IGraphBuilder.cs" />
+    <Compile Include="CreateGraph\UpdateGraph.cs" />
+    <Compile Include="ExportCycle\ExportCycleInTxt.cs" />
+    <Compile Include="ExportCycle\IExportableCycle.cs" />
+    <Compile Include="ExportGraph\ExportGraphInTxt.cs" />
+    <Compile Include="ExportGraph\IExportableGraph.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImportGraph\IGraphImporter.cs" />
+    <Compile Include="ImportGraph\ImportGraphFromTxt.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Visualization.cs" />
+    <Compile Include="Visualizations\DirectedGraphVisualizations.cs" />
+    <Compile Include="Visualizations\IVizualization.cs" />
+    <Compile Include="Visualizations\UndirectedGraphVisualization.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
