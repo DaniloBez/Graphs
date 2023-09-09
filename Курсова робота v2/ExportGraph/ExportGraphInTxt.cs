@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Collections.Generic;
 
-namespace Курсова_робота.ExportGraph
+namespace Випускна_робота.ExportGraph
 {
     internal class ExportGraphInTxt : IExportableGraph
     {

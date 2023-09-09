@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Курсова_робота.CreateGraph
+namespace Випускна_робота.CreateGraph
 {
     internal class CreateRandomDirectedGraph : IGraphBuilder
     {

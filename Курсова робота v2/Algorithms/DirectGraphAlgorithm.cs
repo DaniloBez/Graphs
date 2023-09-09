@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Курсова_робота.Algorithms
+namespace Випускна_робота.Algorithms
 {
     internal class DirectGraphAlgorithm : ICycleDetectionAlgorithm
     {

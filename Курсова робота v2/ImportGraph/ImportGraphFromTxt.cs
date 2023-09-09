@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
 using System.IO;
 
-namespace Курсова_робота.ImportGraph
+namespace Випускна_робота.ImportGraph
 {
     internal class ImportGraphFromTxt : IGraphImporter
     {

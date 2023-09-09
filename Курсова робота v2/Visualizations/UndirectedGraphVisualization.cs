@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace Курсова_робота.Visualizations
+namespace Випускна_робота.Visualizations
 {
     internal class UndirectedGraphVisualization : IVizualization
     {

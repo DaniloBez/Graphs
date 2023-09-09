@@ -2,7 +2,7 @@
 using System.IO;
 using System.Windows.Forms;
 
-namespace Курсова_робота.ExportCycle
+namespace Випускна_робота.ExportCycle
 {
     internal class ExportCycleInTxt : IExportableCycle
     {

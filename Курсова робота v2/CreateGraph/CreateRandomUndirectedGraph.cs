@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Курсова_робота.CreateGraph
+namespace Випускна_робота.CreateGraph
 {
     internal class CreateRandomUndirectedGraph : IGraphBuilder
     {

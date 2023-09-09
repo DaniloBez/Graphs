@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows.Forms;
-using Курсова_робота.Algorithms;
-using Курсова_робота.Visualizations;
-using Курсова_робота.CreateGraph;
-using Курсова_робота.ImportGraph;
-using Курсова_робота.ExportCycle;
-using Курсова_робота.ExportGraph;
+using Випускна_робота.Algorithms;
+using Випускна_робота.CreateGraph;
+using Випускна_робота.ExportCycle;
+using Випускна_робота.ExportGraph;
+using Випускна_робота.ImportGraph;
+using Випускна_робота.Visualizations;
 
-namespace Курсова_робота_v2
+namespace Випускна_робота
 {
     public partial class Form1 : Form
     {
@@ -32,7 +32,7 @@ namespace Курсова_робота_v2
 
         #region ButtonEvents
         #region UndirectedUnweightedGraph
-        private void CreateEmptyUndirectedUnweighted_Click(object sender, EventArgs e)
+        private void CreateEmptyUndirectedUnweightedTSMI_Click(object sender, EventArgs e)
         {
             numberOfVertices = int.Parse(NumberOfVerticesUndirectedUnweightedTB.Text);
             adjacencyMatrix = new int[numberOfVertices, numberOfVertices];
@@ -40,18 +40,7 @@ namespace Курсова_робота_v2
             graphBuilder = new CreateEmptyGraph();
             graphBuilder.CreateGraph(numberOfVertices, ref adjacencyMatrix, ref AdjacencyMatrixUndirectedUnweightedDGV);
         }
-        private void UpdateUndirectedUnweighted_Click(object sender, EventArgs e)
-        {
-            graphVisualization = new UndirectedGraphVisualization();
-            graphAlgorithm = new UndirectGraphAlgorithm();
-
-            graphBuilder = new UpdateGraph();
-            graphBuilder.CreateGraph(numberOfVertices, ref adjacencyMatrix, ref AdjacencyMatrixUndirectedUnweightedDGV);
-
-            PastGraphImageUndirectedUnweightedPB.Image = GraphImageUndirectedUnweightedPB.Image;
-            GraphImageUndirectedUnweightedPB.Image = graphVisualization.DrawGraph(adjacencyMatrix, GraphImageUndirectedUnweightedPB.Width, GraphImageUndirectedUnweightedPB.Height);
-        }
-        private void CreateCompleteUndirectedUnweighted_Click(object sender, EventArgs e)
+        private void CreateCompleteUndirectedUnweightedTSMI_Click(object sender, EventArgs e)
         {
             numberOfVertices = int.Parse(NumberOfVerticesUndirectedUnweightedTB.Text);
 
@@ -64,33 +53,7 @@ namespace Курсова_робота_v2
             PastGraphImageUndirectedUnweightedPB.Image = GraphImageUndirectedUnweightedPB.Image;
             GraphImageUndirectedUnweightedPB.Image = graphVisualization.DrawGraph(adjacencyMatrix, GraphImageUndirectedUnweightedPB.Width, GraphImageUndirectedUnweightedPB.Height);
         }
-        private void MainMethodUndirectedUnweighted_Click(object sender, EventArgs e)
-        {
-            FindCycle(CyclesUndirectedUnweightedLB, PastCyclesUndirectedUnweightedLB, VertexNumberUndirectedUnweightedTB, TimerUndirectedUnweightedLbl);
-        }
-        private void ImportGraphUndirectUnweighted_Click(object sender, EventArgs e)
-        {
-            graphAlgorithm = new UndirectGraphAlgorithm();
-            graphVisualization = new UndirectedGraphVisualization();
-
-            graphImporter = new ImportGraphFromTxt();
-            graphImporter.ImportGraph(ref numberOfVertices, ref adjacencyMatrix, ref AdjacencyMatrixUndirectedUnweightedDGV, openFileDialog1);
-            NumberOfVerticesUndirectedUnweightedTB.Text = numberOfVertices.ToString();
-
-            PastGraphImageUndirectedUnweightedPB.Image = GraphImageUndirectedUnweightedPB.Image;
-            GraphImageUndirectedUnweightedPB.Image = graphVisualization.DrawGraph(adjacencyMatrix, GraphImageUndirectedUnweightedPB.Width, GraphImageUndirectedUnweightedPB.Height);
-        }
-        private void ExportGraphToTxtUndirected_Click(object sender, EventArgs e)
-        {
-            graphExport = new ExportGraphInTxt();
-            graphExport.ExportGraph(adjacencyMatrix, saveFileDialog1);
-        }
-        private void ExportCycleToTxtUndirected_Click(object sender, EventArgs e)
-        {
-            cycleExport = new ExportCycleInTxt();
-            cycleExport.Export(allCycles, saveFileDialog1);
-        }
-        private void CreateRandomGraphUndirected_Click(object sender, EventArgs e)
+        private void CreateRandomGraphUndirectedTSMI_Click(object sender, EventArgs e)
         {
             numberOfVertices = int.Parse(NumberOfVerticesUndirectedUnweightedTB.Text);
 
@@ -103,9 +66,46 @@ namespace Курсова_робота_v2
             PastGraphImageUndirectedUnweightedPB.Image = GraphImageUndirectedUnweightedPB.Image;
             GraphImageUndirectedUnweightedPB.Image = graphVisualization.DrawGraph(adjacencyMatrix, GraphImageUndirectedUnweightedPB.Width, GraphImageUndirectedUnweightedPB.Height);
         }
+        private void UpdateUndirectedUnweightedГрафTSMI_Click(object sender, EventArgs e)
+        {
+            graphVisualization = new UndirectedGraphVisualization();
+            graphAlgorithm = new UndirectGraphAlgorithm();
+
+            graphBuilder = new UpdateGraph();
+            graphBuilder.CreateGraph(numberOfVertices, ref adjacencyMatrix, ref AdjacencyMatrixUndirectedUnweightedDGV);
+
+            PastGraphImageUndirectedUnweightedPB.Image = GraphImageUndirectedUnweightedPB.Image;
+            GraphImageUndirectedUnweightedPB.Image = graphVisualization.DrawGraph(adjacencyMatrix, GraphImageUndirectedUnweightedPB.Width, GraphImageUndirectedUnweightedPB.Height);
+        }
+        private void MainMethodUndirectedUnweightedTSMI_Click(object sender, EventArgs e)
+        {
+            FindCycle(CyclesUndirectedUnweightedLB, PastCyclesUndirectedUnweightedLB, VertexNumberUndirectedUnweightedTB, TimerUndirectedUnweightedLbl);
+        }
+        private void ImportGraphUndirectUnweightedTSMI_Click(object sender, EventArgs e)
+        {
+            graphAlgorithm = new UndirectGraphAlgorithm();
+            graphVisualization = new UndirectedGraphVisualization();
+
+            graphImporter = new ImportGraphFromTxt();
+            graphImporter.ImportGraph(ref numberOfVertices, ref adjacencyMatrix, ref AdjacencyMatrixUndirectedUnweightedDGV, openFileDialog1);
+            NumberOfVerticesUndirectedUnweightedTB.Text = numberOfVertices.ToString();
+
+            PastGraphImageUndirectedUnweightedPB.Image = GraphImageUndirectedUnweightedPB.Image;
+            GraphImageUndirectedUnweightedPB.Image = graphVisualization.DrawGraph(adjacencyMatrix, GraphImageUndirectedUnweightedPB.Width, GraphImageUndirectedUnweightedPB.Height);
+        }
+        private void ExportGraphToTxtUndirectedTSMI_Click(object sender, EventArgs e)
+        {
+            graphExport = new ExportGraphInTxt();
+            graphExport.ExportGraph(adjacencyMatrix, saveFileDialog1);
+        }
+        private void ExportCycleToTxtUndirectedTSMI_Click(object sender, EventArgs e)
+        {
+            cycleExport = new ExportCycleInTxt();
+            cycleExport.Export(allCycles, saveFileDialog1);
+        }
         #endregion
         #region DirectedUnweightedGraph
-        private void CreateEmptyDirectedUnweighted_Click(object sender, EventArgs e)
+        private void CreateEmptyDirectedUnweightedTSMI_Click(object sender, EventArgs e)
         {
             numberOfVertices = int.Parse(NumberOfVerticesDirectedUnweightedTB.Text);
             adjacencyMatrix = new int[numberOfVertices, numberOfVertices];
@@ -113,18 +113,7 @@ namespace Курсова_робота_v2
             graphBuilder = new CreateEmptyGraph();
             graphBuilder.CreateGraph(numberOfVertices, ref adjacencyMatrix, ref AdjacencyMatrixDirectedUnweightedDGV);
         }
-        private void UpdateDirectedUnweighted_Click(object sender, EventArgs e)
-        {
-            graphVisualization = new DirectedGraphVisualization();
-            graphAlgorithm = new DirectGraphAlgorithm();    
-
-            graphBuilder = new UpdateGraph();
-            graphBuilder.CreateGraph(numberOfVertices, ref adjacencyMatrix, ref AdjacencyMatrixDirectedUnweightedDGV);
-
-            PastGraphImageDirectedUnweightedPB.Image = GraphImageDirectedUnweightedPB.Image;
-            GraphImageDirectedUnweightedPB.Image = graphVisualization.DrawGraph(adjacencyMatrix, GraphImageDirectedUnweightedPB.Width, GraphImageDirectedUnweightedPB.Height);
-        }
-        private void CreateCompleteDirectedUnweighted_Click(object sender, EventArgs e)
+        private void CreateCompleteDirectedUnweightedTSMI_Click(object sender, EventArgs e)
         {
             numberOfVertices = int.Parse(NumberOfVerticesDirectedUnweightedTB.Text);
 
@@ -132,16 +121,40 @@ namespace Курсова_робота_v2
             graphAlgorithm = new DirectGraphAlgorithm();
 
             graphBuilder = new CreateCompleteGraph();
-            graphBuilder.CreateGraph(numberOfVertices, ref adjacencyMatrix, ref AdjacencyMatrixUndirectedUnweightedDGV);
+            graphBuilder.CreateGraph(numberOfVertices, ref adjacencyMatrix, ref AdjacencyMatrixDirectedUnweightedDGV);
 
             PastGraphImageDirectedUnweightedPB.Image = GraphImageDirectedUnweightedPB.Image;
             GraphImageDirectedUnweightedPB.Image = graphVisualization.DrawGraph(adjacencyMatrix, GraphImageDirectedUnweightedPB.Width, GraphImageDirectedUnweightedPB.Height);
         }
-        private void MainMethodDirectedUnweighted_Click(object sender, EventArgs e)
+        private void CreateRandomGraphDirectedTSMI_Click(object sender, EventArgs e)
+        {
+            numberOfVertices = int.Parse(NumberOfVerticesDirectedUnweightedTB.Text);
+
+            graphVisualization = new DirectedGraphVisualization();
+            graphAlgorithm = new DirectGraphAlgorithm();
+
+            graphBuilder = new CreateRandomDirectedGraph();
+            graphBuilder.CreateGraph(numberOfVertices, ref adjacencyMatrix, ref AdjacencyMatrixDirectedUnweightedDGV);
+
+            PastGraphImageDirectedUnweightedPB.Image = GraphImageDirectedUnweightedPB.Image;
+            GraphImageDirectedUnweightedPB.Image = graphVisualization.DrawGraph(adjacencyMatrix, GraphImageDirectedUnweightedPB.Width, GraphImageDirectedUnweightedPB.Height);
+        }
+        private void UpdateDirectedUnweightedГрафTSMI_Click(object sender, EventArgs e)
+        {
+            graphVisualization = new DirectedGraphVisualization();
+            graphAlgorithm = new DirectGraphAlgorithm();
+
+            graphBuilder = new UpdateGraph();
+            graphBuilder.CreateGraph(numberOfVertices, ref adjacencyMatrix, ref AdjacencyMatrixDirectedUnweightedDGV);
+
+            PastGraphImageDirectedUnweightedPB.Image = GraphImageDirectedUnweightedPB.Image;
+            GraphImageDirectedUnweightedPB.Image = graphVisualization.DrawGraph(adjacencyMatrix, GraphImageDirectedUnweightedPB.Width, GraphImageDirectedUnweightedPB.Height);
+        }
+        private void MainMethodDirectedUnweightedTSMI_Click(object sender, EventArgs e)
         {
             FindCycle(CyclesDirectedUnweightedLB, PastCyclesDirectedUnweightedLB, VertexNumberDirectedUnweightedTB, TimerDirectedUnweightedLbl);
         }
-        private void ImportGraphDirectUnweighted_Click(object sender, EventArgs e)
+        private void ImportGraphDirectUnweightedTSMI_Click(object sender, EventArgs e)
         {
             graphAlgorithm = new DirectGraphAlgorithm();
             graphVisualization = new DirectedGraphVisualization();
@@ -153,25 +166,12 @@ namespace Курсова_робота_v2
             PastGraphImageDirectedUnweightedPB.Image = GraphImageDirectedUnweightedPB.Image;
             GraphImageDirectedUnweightedPB.Image = graphVisualization.DrawGraph(adjacencyMatrix, GraphImageDirectedUnweightedPB.Width, GraphImageDirectedUnweightedPB.Height);
         }
-        private void CreateRandomGraphDirected_Click(object sender, EventArgs e)
-        {
-            numberOfVertices = int.Parse(NumberOfVerticesDirectedUnweightedTB.Text);
-
-            graphVisualization = new DirectedGraphVisualization();
-            graphAlgorithm = new DirectGraphAlgorithm();
-
-            graphBuilder = new CreateRandomDirectedGraph();
-            graphBuilder.CreateGraph(numberOfVertices, ref adjacencyMatrix, ref AdjacencyMatrixUndirectedUnweightedDGV);
-
-            PastGraphImageDirectedUnweightedPB.Image = GraphImageDirectedUnweightedPB.Image;
-            GraphImageDirectedUnweightedPB.Image = graphVisualization.DrawGraph(adjacencyMatrix, GraphImageDirectedUnweightedPB.Width, GraphImageDirectedUnweightedPB.Height);
-        }
-        private void ExportGraphToTxtDirected_Click(object sender, EventArgs e)
+        private void ExportGraphToTxtDirectedTSMI_Click(object sender, EventArgs e)
         {
             graphExport = new ExportGraphInTxt();
             graphExport.ExportGraph(adjacencyMatrix, saveFileDialog1);
         }
-        private void ExportCycleToTxtDirected_Click(object sender, EventArgs e)
+        private void ExportCycleToTxtDirectedTSMI_Click(object sender, EventArgs e)
         {
             cycleExport = new ExportCycleInTxt();
             cycleExport.Export(allCycles, saveFileDialog1);
@@ -180,6 +180,8 @@ namespace Курсова_робота_v2
         #endregion
 
         #region Programm
+
+        private void Form1_Load(object sender, EventArgs e) => GraphImageDirectedUnweightedLbl.BringToFront();
         private void FindCycle(ListBox listBox1, ListBox listBox2, TextBox textBox, Label label)
         {
             listBox2.BeginUpdate();
@@ -224,6 +226,7 @@ namespace Курсова_робота_v2
             }
             list.EndUpdate();
         }
+
         #endregion
     }
 }

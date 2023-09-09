@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Курсова_робота_v2
+namespace Випускна_робота
 {
     internal static class Program
     {

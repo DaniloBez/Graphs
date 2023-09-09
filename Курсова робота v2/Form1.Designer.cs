@@ -1,4 +1,4 @@
-﻿namespace Курсова_робота_v2
+﻿namespace Випускна_робота
 {
     partial class Form1
     {
@@ -30,9 +30,6 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.UndirectedUnweighted = new System.Windows.Forms.TabPage();
-            this.ExportCycleToTxtUndirected = new System.Windows.Forms.Button();
-            this.ExportGraphToTxtUndirected = new System.Windows.Forms.Button();
-            this.ImportGraphUndirectUnweighted = new System.Windows.Forms.Button();
             this.GraphImageUndirectedUnweightedLbl = new System.Windows.Forms.Label();
             this.GraphImageUndirectedUnweightedPB = new System.Windows.Forms.PictureBox();
             this.NumberOfVerticesUndirectedUnweightedLbl = new System.Windows.Forms.Label();
@@ -43,17 +40,40 @@
             this.VertexNumberUndirectedUnweightedTB = new System.Windows.Forms.TextBox();
             this.CyclesUndirectedUnweightedLbl = new System.Windows.Forms.Label();
             this.PastCyclesUndirectedUnweightedLbl = new System.Windows.Forms.Label();
-            this.UpdateUndirectedUnweighted = new System.Windows.Forms.Button();
             this.CyclesUndirectedUnweightedLB = new System.Windows.Forms.ListBox();
             this.PastCyclesUndirectedUnweightedLB = new System.Windows.Forms.ListBox();
-            this.MainMethodUndirectedUnweighted = new System.Windows.Forms.Button();
             this.AdjacencyMatrixUndirectedUnweightedDGV = new System.Windows.Forms.DataGridView();
             this.AdjacencyMatrixUndirectedUnweightedLbl = new System.Windows.Forms.Label();
-            this.CreateCompleteUndirectedUnweighted = new System.Windows.Forms.Button();
             this.TimerUndirectedUnweightedLbl = new System.Windows.Forms.Label();
-            this.CreateEmptyUndirectedUnweighted = new System.Windows.Forms.Button();
+            this.UndirectGraphMS = new System.Windows.Forms.MenuStrip();
+            this.CreateGraphUnd = new System.Windows.Forms.ToolStripMenuItem();
+            this.CreateEmptyUndirectedUnweightedTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.CreateCompleteUndirectedUnweightedTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.CreateRandomGraphUndirectedTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.UpdateUndirectedUnweightedГрафTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.FindCyclesUnd = new System.Windows.Forms.ToolStripMenuItem();
+            this.MainMethodUndirectedUnweightedTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.ImportGraphUnd = new System.Windows.Forms.ToolStripMenuItem();
+            this.ImportGraphUndirectUnweightedTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.ExportGraphUnd = new System.Windows.Forms.ToolStripMenuItem();
+            this.ExportGraphToTxtUndirectedTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.ExportCyclesUnd = new System.Windows.Forms.ToolStripMenuItem();
+            this.ExportCycleToTxtUndirectedTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.DirectedUnweighted = new System.Windows.Forms.TabPage();
-            this.ImportGraphDirectUnweighted = new System.Windows.Forms.Button();
+            this.DirectGraphSM = new System.Windows.Forms.MenuStrip();
+            this.CreateGraph = new System.Windows.Forms.ToolStripMenuItem();
+            this.CreateEmptyDirectedUnweightedTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.CreateCompleteDirectedUnweightedTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.CreateRandomGraphDirectedTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.UpdateDirectedUnweightedГрафTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.FindCycles = new System.Windows.Forms.ToolStripMenuItem();
+            this.MainMethodDirectedUnweightedTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.ImportGraph = new System.Windows.Forms.ToolStripMenuItem();
+            this.ImportGraphDirectUnweightedTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.ExportGraph = new System.Windows.Forms.ToolStripMenuItem();
+            this.ExportGraphToTxtDirectedTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.ExportCycles = new System.Windows.Forms.ToolStripMenuItem();
+            this.ExportCycleToTxtDirectedTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.GraphImageDirectedUnweightedLbl = new System.Windows.Forms.Label();
             this.GraphImageDirectedUnweightedPB = new System.Windows.Forms.PictureBox();
             this.NumberOfVerticesDirectedUnweightedLbl = new System.Windows.Forms.Label();
@@ -64,27 +84,21 @@
             this.VertexNumberDirectedUnweightedTB = new System.Windows.Forms.TextBox();
             this.CyclesDirectedUnweightedLbl = new System.Windows.Forms.Label();
             this.PastCyclesDirectedUnweightedLbl = new System.Windows.Forms.Label();
-            this.UpdateDirectedUnweighted = new System.Windows.Forms.Button();
             this.CyclesDirectedUnweightedLB = new System.Windows.Forms.ListBox();
             this.PastCyclesDirectedUnweightedLB = new System.Windows.Forms.ListBox();
-            this.MainMethodDirectedUnweighted = new System.Windows.Forms.Button();
             this.AdjacencyMatrixDirectedUnweightedDGV = new System.Windows.Forms.DataGridView();
             this.AdjacencyMatrixDirectedUnweightedLbl = new System.Windows.Forms.Label();
-            this.CreateCompleteDirectedUnweighted = new System.Windows.Forms.Button();
             this.TimerDirectedUnweightedLbl = new System.Windows.Forms.Label();
-            this.CreateEmptyDirectedUnweighted = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.CreateRandomGraphUndirected = new System.Windows.Forms.Button();
-            this.CreateRandomGraphDirected = new System.Windows.Forms.Button();
-            this.ExportCycleToTxtDirected = new System.Windows.Forms.Button();
-            this.ExportGraphToTxtDirected = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.UndirectedUnweighted.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GraphImageUndirectedUnweightedPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PastGraphImageUndirectedUnweightedPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AdjacencyMatrixUndirectedUnweightedDGV)).BeginInit();
+            this.UndirectGraphMS.SuspendLayout();
             this.DirectedUnweighted.SuspendLayout();
+            this.DirectGraphSM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GraphImageDirectedUnweightedPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PastGraphImageDirectedUnweightedPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AdjacencyMatrixDirectedUnweightedDGV)).BeginInit();
@@ -102,10 +116,6 @@
             // 
             // UndirectedUnweighted
             // 
-            this.UndirectedUnweighted.Controls.Add(this.CreateRandomGraphUndirected);
-            this.UndirectedUnweighted.Controls.Add(this.ExportCycleToTxtUndirected);
-            this.UndirectedUnweighted.Controls.Add(this.ExportGraphToTxtUndirected);
-            this.UndirectedUnweighted.Controls.Add(this.ImportGraphUndirectUnweighted);
             this.UndirectedUnweighted.Controls.Add(this.GraphImageUndirectedUnweightedLbl);
             this.UndirectedUnweighted.Controls.Add(this.GraphImageUndirectedUnweightedPB);
             this.UndirectedUnweighted.Controls.Add(this.NumberOfVerticesUndirectedUnweightedLbl);
@@ -116,15 +126,12 @@
             this.UndirectedUnweighted.Controls.Add(this.VertexNumberUndirectedUnweightedTB);
             this.UndirectedUnweighted.Controls.Add(this.CyclesUndirectedUnweightedLbl);
             this.UndirectedUnweighted.Controls.Add(this.PastCyclesUndirectedUnweightedLbl);
-            this.UndirectedUnweighted.Controls.Add(this.UpdateUndirectedUnweighted);
             this.UndirectedUnweighted.Controls.Add(this.CyclesUndirectedUnweightedLB);
             this.UndirectedUnweighted.Controls.Add(this.PastCyclesUndirectedUnweightedLB);
-            this.UndirectedUnweighted.Controls.Add(this.MainMethodUndirectedUnweighted);
             this.UndirectedUnweighted.Controls.Add(this.AdjacencyMatrixUndirectedUnweightedDGV);
             this.UndirectedUnweighted.Controls.Add(this.AdjacencyMatrixUndirectedUnweightedLbl);
-            this.UndirectedUnweighted.Controls.Add(this.CreateCompleteUndirectedUnweighted);
             this.UndirectedUnweighted.Controls.Add(this.TimerUndirectedUnweightedLbl);
-            this.UndirectedUnweighted.Controls.Add(this.CreateEmptyUndirectedUnweighted);
+            this.UndirectedUnweighted.Controls.Add(this.UndirectGraphMS);
             this.UndirectedUnweighted.Location = new System.Drawing.Point(4, 34);
             this.UndirectedUnweighted.Name = "UndirectedUnweighted";
             this.UndirectedUnweighted.Padding = new System.Windows.Forms.Padding(3);
@@ -133,40 +140,10 @@
             this.UndirectedUnweighted.Text = "Неорієнтовний Незважений";
             this.UndirectedUnweighted.UseVisualStyleBackColor = true;
             // 
-            // ExportCycleToTxtUndirected
-            // 
-            this.ExportCycleToTxtUndirected.Location = new System.Drawing.Point(755, 543);
-            this.ExportCycleToTxtUndirected.Name = "ExportCycleToTxtUndirected";
-            this.ExportCycleToTxtUndirected.Size = new System.Drawing.Size(179, 92);
-            this.ExportCycleToTxtUndirected.TabIndex = 69;
-            this.ExportCycleToTxtUndirected.Text = "Експортувати цикли до txt файла";
-            this.ExportCycleToTxtUndirected.UseVisualStyleBackColor = true;
-            this.ExportCycleToTxtUndirected.Click += new System.EventHandler(this.ExportCycleToTxtUndirected_Click);
-            // 
-            // ExportGraphToTxtUndirected
-            // 
-            this.ExportGraphToTxtUndirected.Location = new System.Drawing.Point(755, 641);
-            this.ExportGraphToTxtUndirected.Name = "ExportGraphToTxtUndirected";
-            this.ExportGraphToTxtUndirected.Size = new System.Drawing.Size(179, 92);
-            this.ExportGraphToTxtUndirected.TabIndex = 68;
-            this.ExportGraphToTxtUndirected.Text = "Експортувати граф до txt файла";
-            this.ExportGraphToTxtUndirected.UseVisualStyleBackColor = true;
-            this.ExportGraphToTxtUndirected.Click += new System.EventHandler(this.ExportGraphToTxtUndirected_Click);
-            // 
-            // ImportGraphUndirectUnweighted
-            // 
-            this.ImportGraphUndirectUnweighted.Location = new System.Drawing.Point(755, 445);
-            this.ImportGraphUndirectUnweighted.Name = "ImportGraphUndirectUnweighted";
-            this.ImportGraphUndirectUnweighted.Size = new System.Drawing.Size(179, 92);
-            this.ImportGraphUndirectUnweighted.TabIndex = 67;
-            this.ImportGraphUndirectUnweighted.Text = "Імпортувати граф з txt файла";
-            this.ImportGraphUndirectUnweighted.UseVisualStyleBackColor = true;
-            this.ImportGraphUndirectUnweighted.Click += new System.EventHandler(this.ImportGraphUndirectUnweighted_Click);
-            // 
             // GraphImageUndirectedUnweightedLbl
             // 
             this.GraphImageUndirectedUnweightedLbl.AutoSize = true;
-            this.GraphImageUndirectedUnweightedLbl.Location = new System.Drawing.Point(1252, 10);
+            this.GraphImageUndirectedUnweightedLbl.Location = new System.Drawing.Point(1249, 15);
             this.GraphImageUndirectedUnweightedLbl.Name = "GraphImageUndirectedUnweightedLbl";
             this.GraphImageUndirectedUnweightedLbl.Size = new System.Drawing.Size(191, 25);
             this.GraphImageUndirectedUnweightedLbl.TabIndex = 61;
@@ -174,7 +151,7 @@
             // 
             // GraphImageUndirectedUnweightedPB
             // 
-            this.GraphImageUndirectedUnweightedPB.Location = new System.Drawing.Point(1167, 38);
+            this.GraphImageUndirectedUnweightedPB.Location = new System.Drawing.Point(1171, 43);
             this.GraphImageUndirectedUnweightedPB.Name = "GraphImageUndirectedUnweightedPB";
             this.GraphImageUndirectedUnweightedPB.Size = new System.Drawing.Size(350, 350);
             this.GraphImageUndirectedUnweightedPB.TabIndex = 60;
@@ -183,7 +160,7 @@
             // NumberOfVerticesUndirectedUnweightedLbl
             // 
             this.NumberOfVerticesUndirectedUnweightedLbl.AutoSize = true;
-            this.NumberOfVerticesUndirectedUnweightedLbl.Location = new System.Drawing.Point(10, 10);
+            this.NumberOfVerticesUndirectedUnweightedLbl.Location = new System.Drawing.Point(64, 60);
             this.NumberOfVerticesUndirectedUnweightedLbl.Name = "NumberOfVerticesUndirectedUnweightedLbl";
             this.NumberOfVerticesUndirectedUnweightedLbl.Size = new System.Drawing.Size(171, 25);
             this.NumberOfVerticesUndirectedUnweightedLbl.TabIndex = 49;
@@ -192,7 +169,7 @@
             // PastGraphImageUndirectedUnweightedLbl
             // 
             this.PastGraphImageUndirectedUnweightedLbl.AutoSize = true;
-            this.PastGraphImageUndirectedUnweightedLbl.Location = new System.Drawing.Point(1270, 391);
+            this.PastGraphImageUndirectedUnweightedLbl.Location = new System.Drawing.Point(1282, 392);
             this.PastGraphImageUndirectedUnweightedLbl.Name = "PastGraphImageUndirectedUnweightedLbl";
             this.PastGraphImageUndirectedUnweightedLbl.Size = new System.Drawing.Size(146, 25);
             this.PastGraphImageUndirectedUnweightedLbl.TabIndex = 64;
@@ -200,7 +177,7 @@
             // 
             // PastGraphImageUndirectedUnweightedPB
             // 
-            this.PastGraphImageUndirectedUnweightedPB.Location = new System.Drawing.Point(1160, 416);
+            this.PastGraphImageUndirectedUnweightedPB.Location = new System.Drawing.Point(1170, 417);
             this.PastGraphImageUndirectedUnweightedPB.Name = "PastGraphImageUndirectedUnweightedPB";
             this.PastGraphImageUndirectedUnweightedPB.Size = new System.Drawing.Size(350, 350);
             this.PastGraphImageUndirectedUnweightedPB.TabIndex = 62;
@@ -208,7 +185,7 @@
             // 
             // NumberOfVerticesUndirectedUnweightedTB
             // 
-            this.NumberOfVerticesUndirectedUnweightedTB.Location = new System.Drawing.Point(43, 38);
+            this.NumberOfVerticesUndirectedUnweightedTB.Location = new System.Drawing.Point(100, 108);
             this.NumberOfVerticesUndirectedUnweightedTB.Name = "NumberOfVerticesUndirectedUnweightedTB";
             this.NumberOfVerticesUndirectedUnweightedTB.Size = new System.Drawing.Size(100, 30);
             this.NumberOfVerticesUndirectedUnweightedTB.TabIndex = 51;
@@ -216,7 +193,7 @@
             // VertexNumberUndirectedUnweightedLbl
             // 
             this.VertexNumberUndirectedUnweightedLbl.AutoSize = true;
-            this.VertexNumberUndirectedUnweightedLbl.Location = new System.Drawing.Point(234, 10);
+            this.VertexNumberUndirectedUnweightedLbl.Location = new System.Drawing.Point(353, 60);
             this.VertexNumberUndirectedUnweightedLbl.Name = "VertexNumberUndirectedUnweightedLbl";
             this.VertexNumberUndirectedUnweightedLbl.Size = new System.Drawing.Size(161, 25);
             this.VertexNumberUndirectedUnweightedLbl.TabIndex = 54;
@@ -224,7 +201,7 @@
             // 
             // VertexNumberUndirectedUnweightedTB
             // 
-            this.VertexNumberUndirectedUnweightedTB.Location = new System.Drawing.Point(267, 38);
+            this.VertexNumberUndirectedUnweightedTB.Location = new System.Drawing.Point(378, 108);
             this.VertexNumberUndirectedUnweightedTB.Name = "VertexNumberUndirectedUnweightedTB";
             this.VertexNumberUndirectedUnweightedTB.Size = new System.Drawing.Size(100, 30);
             this.VertexNumberUndirectedUnweightedTB.TabIndex = 59;
@@ -232,7 +209,7 @@
             // CyclesUndirectedUnweightedLbl
             // 
             this.CyclesUndirectedUnweightedLbl.AutoSize = true;
-            this.CyclesUndirectedUnweightedLbl.Location = new System.Drawing.Point(6, 110);
+            this.CyclesUndirectedUnweightedLbl.Location = new System.Drawing.Point(8, 165);
             this.CyclesUndirectedUnweightedLbl.Name = "CyclesUndirectedUnweightedLbl";
             this.CyclesUndirectedUnweightedLbl.Size = new System.Drawing.Size(318, 25);
             this.CyclesUndirectedUnweightedLbl.TabIndex = 57;
@@ -241,27 +218,17 @@
             // PastCyclesUndirectedUnweightedLbl
             // 
             this.PastCyclesUndirectedUnweightedLbl.AutoSize = true;
-            this.PastCyclesUndirectedUnweightedLbl.Location = new System.Drawing.Point(353, 110);
+            this.PastCyclesUndirectedUnweightedLbl.Location = new System.Drawing.Point(363, 165);
             this.PastCyclesUndirectedUnweightedLbl.Name = "PastCyclesUndirectedUnweightedLbl";
             this.PastCyclesUndirectedUnweightedLbl.Size = new System.Drawing.Size(136, 25);
             this.PastCyclesUndirectedUnweightedLbl.TabIndex = 65;
             this.PastCyclesUndirectedUnweightedLbl.Text = "Минулі цикли";
             // 
-            // UpdateUndirectedUnweighted
-            // 
-            this.UpdateUndirectedUnweighted.Location = new System.Drawing.Point(385, 641);
-            this.UpdateUndirectedUnweighted.Name = "UpdateUndirectedUnweighted";
-            this.UpdateUndirectedUnweighted.Size = new System.Drawing.Size(179, 92);
-            this.UpdateUndirectedUnweighted.TabIndex = 66;
-            this.UpdateUndirectedUnweighted.Text = "Оновити граф";
-            this.UpdateUndirectedUnweighted.UseVisualStyleBackColor = true;
-            this.UpdateUndirectedUnweighted.Click += new System.EventHandler(this.UpdateUndirectedUnweighted_Click);
-            // 
             // CyclesUndirectedUnweightedLB
             // 
             this.CyclesUndirectedUnweightedLB.FormattingEnabled = true;
             this.CyclesUndirectedUnweightedLB.ItemHeight = 25;
-            this.CyclesUndirectedUnweightedLB.Location = new System.Drawing.Point(28, 153);
+            this.CyclesUndirectedUnweightedLB.Location = new System.Drawing.Point(69, 208);
             this.CyclesUndirectedUnweightedLB.Name = "CyclesUndirectedUnweightedLB";
             this.CyclesUndirectedUnweightedLB.Size = new System.Drawing.Size(166, 379);
             this.CyclesUndirectedUnweightedLB.TabIndex = 56;
@@ -270,25 +237,15 @@
             // 
             this.PastCyclesUndirectedUnweightedLB.FormattingEnabled = true;
             this.PastCyclesUndirectedUnweightedLB.ItemHeight = 25;
-            this.PastCyclesUndirectedUnweightedLB.Location = new System.Drawing.Point(324, 153);
+            this.PastCyclesUndirectedUnweightedLB.Location = new System.Drawing.Point(349, 208);
             this.PastCyclesUndirectedUnweightedLB.Name = "PastCyclesUndirectedUnweightedLB";
             this.PastCyclesUndirectedUnweightedLB.Size = new System.Drawing.Size(165, 379);
             this.PastCyclesUndirectedUnweightedLB.TabIndex = 63;
             // 
-            // MainMethodUndirectedUnweighted
-            // 
-            this.MainMethodUndirectedUnweighted.Location = new System.Drawing.Point(940, 641);
-            this.MainMethodUndirectedUnweighted.Name = "MainMethodUndirectedUnweighted";
-            this.MainMethodUndirectedUnweighted.Size = new System.Drawing.Size(179, 92);
-            this.MainMethodUndirectedUnweighted.TabIndex = 53;
-            this.MainMethodUndirectedUnweighted.Text = "Знайти цикли, яким належить вершина";
-            this.MainMethodUndirectedUnweighted.UseVisualStyleBackColor = true;
-            this.MainMethodUndirectedUnweighted.Click += new System.EventHandler(this.MainMethodUndirectedUnweighted_Click);
-            // 
             // AdjacencyMatrixUndirectedUnweightedDGV
             // 
             this.AdjacencyMatrixUndirectedUnweightedDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AdjacencyMatrixUndirectedUnweightedDGV.Location = new System.Drawing.Point(570, 38);
+            this.AdjacencyMatrixUndirectedUnweightedDGV.Location = new System.Drawing.Point(578, 108);
             this.AdjacencyMatrixUndirectedUnweightedDGV.Name = "AdjacencyMatrixUndirectedUnweightedDGV";
             this.AdjacencyMatrixUndirectedUnweightedDGV.RowHeadersWidth = 51;
             this.AdjacencyMatrixUndirectedUnweightedDGV.RowTemplate.Height = 24;
@@ -298,47 +255,138 @@
             // AdjacencyMatrixUndirectedUnweightedLbl
             // 
             this.AdjacencyMatrixUndirectedUnweightedLbl.AutoSize = true;
-            this.AdjacencyMatrixUndirectedUnweightedLbl.Location = new System.Drawing.Point(732, 10);
+            this.AdjacencyMatrixUndirectedUnweightedLbl.Location = new System.Drawing.Point(741, 60);
             this.AdjacencyMatrixUndirectedUnweightedLbl.Name = "AdjacencyMatrixUndirectedUnweightedLbl";
             this.AdjacencyMatrixUndirectedUnweightedLbl.Size = new System.Drawing.Size(205, 25);
             this.AdjacencyMatrixUndirectedUnweightedLbl.TabIndex = 50;
             this.AdjacencyMatrixUndirectedUnweightedLbl.Text = "Матриця суміжності";
             // 
-            // CreateCompleteUndirectedUnweighted
-            // 
-            this.CreateCompleteUndirectedUnweighted.Location = new System.Drawing.Point(200, 641);
-            this.CreateCompleteUndirectedUnweighted.Name = "CreateCompleteUndirectedUnweighted";
-            this.CreateCompleteUndirectedUnweighted.Size = new System.Drawing.Size(179, 92);
-            this.CreateCompleteUndirectedUnweighted.TabIndex = 55;
-            this.CreateCompleteUndirectedUnweighted.Text = "Створення повного графу";
-            this.CreateCompleteUndirectedUnweighted.UseVisualStyleBackColor = true;
-            this.CreateCompleteUndirectedUnweighted.Click += new System.EventHandler(this.CreateCompleteUndirectedUnweighted_Click);
-            // 
             // TimerUndirectedUnweightedLbl
             // 
             this.TimerUndirectedUnweightedLbl.AutoSize = true;
-            this.TimerUndirectedUnweightedLbl.Location = new System.Drawing.Point(23, 577);
+            this.TimerUndirectedUnweightedLbl.Location = new System.Drawing.Point(8, 651);
             this.TimerUndirectedUnweightedLbl.Name = "TimerUndirectedUnweightedLbl";
             this.TimerUndirectedUnweightedLbl.Size = new System.Drawing.Size(252, 25);
             this.TimerUndirectedUnweightedLbl.TabIndex = 58;
             this.TimerUndirectedUnweightedLbl.Text = "Час виконання програми: ";
             // 
-            // CreateEmptyUndirectedUnweighted
+            // UndirectGraphMS
             // 
-            this.CreateEmptyUndirectedUnweighted.Location = new System.Drawing.Point(15, 641);
-            this.CreateEmptyUndirectedUnweighted.Name = "CreateEmptyUndirectedUnweighted";
-            this.CreateEmptyUndirectedUnweighted.Size = new System.Drawing.Size(179, 92);
-            this.CreateEmptyUndirectedUnweighted.TabIndex = 48;
-            this.CreateEmptyUndirectedUnweighted.Text = "Створення незаповненого графу";
-            this.CreateEmptyUndirectedUnweighted.UseVisualStyleBackColor = true;
-            this.CreateEmptyUndirectedUnweighted.Click += new System.EventHandler(this.CreateEmptyUndirectedUnweighted_Click);
+            this.UndirectGraphMS.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.UndirectGraphMS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CreateGraphUnd,
+            this.FindCyclesUnd,
+            this.ImportGraphUnd,
+            this.ExportGraphUnd,
+            this.ExportCyclesUnd});
+            this.UndirectGraphMS.Location = new System.Drawing.Point(3, 3);
+            this.UndirectGraphMS.Name = "UndirectGraphMS";
+            this.UndirectGraphMS.Size = new System.Drawing.Size(1514, 28);
+            this.UndirectGraphMS.TabIndex = 71;
+            this.UndirectGraphMS.Text = "menuStrip1";
+            // 
+            // CreateGraphUnd
+            // 
+            this.CreateGraphUnd.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CreateEmptyUndirectedUnweightedTSMI,
+            this.CreateCompleteUndirectedUnweightedTSMI,
+            this.CreateRandomGraphUndirectedTSMI,
+            this.UpdateUndirectedUnweightedГрафTSMI});
+            this.CreateGraphUnd.Name = "CreateGraphUnd";
+            this.CreateGraphUnd.Size = new System.Drawing.Size(152, 24);
+            this.CreateGraphUnd.Text = "Стрворення графа";
+            // 
+            // CreateEmptyUndirectedUnweightedTSMI
+            // 
+            this.CreateEmptyUndirectedUnweightedTSMI.Name = "CreateEmptyUndirectedUnweightedTSMI";
+            this.CreateEmptyUndirectedUnweightedTSMI.Size = new System.Drawing.Size(202, 26);
+            this.CreateEmptyUndirectedUnweightedTSMI.Text = "Незаповненого";
+            this.CreateEmptyUndirectedUnweightedTSMI.Click += new System.EventHandler(this.CreateEmptyUndirectedUnweightedTSMI_Click);
+            // 
+            // CreateCompleteUndirectedUnweightedTSMI
+            // 
+            this.CreateCompleteUndirectedUnweightedTSMI.Name = "CreateCompleteUndirectedUnweightedTSMI";
+            this.CreateCompleteUndirectedUnweightedTSMI.Size = new System.Drawing.Size(202, 26);
+            this.CreateCompleteUndirectedUnweightedTSMI.Text = "Повного";
+            this.CreateCompleteUndirectedUnweightedTSMI.Click += new System.EventHandler(this.CreateCompleteUndirectedUnweightedTSMI_Click);
+            // 
+            // CreateRandomGraphUndirectedTSMI
+            // 
+            this.CreateRandomGraphUndirectedTSMI.Name = "CreateRandomGraphUndirectedTSMI";
+            this.CreateRandomGraphUndirectedTSMI.Size = new System.Drawing.Size(202, 26);
+            this.CreateRandomGraphUndirectedTSMI.Text = "Випадково";
+            this.CreateRandomGraphUndirectedTSMI.Click += new System.EventHandler(this.CreateRandomGraphUndirectedTSMI_Click);
+            // 
+            // UpdateUndirectedUnweightedГрафTSMI
+            // 
+            this.UpdateUndirectedUnweightedГрафTSMI.Name = "UpdateUndirectedUnweightedГрафTSMI";
+            this.UpdateUndirectedUnweightedГрафTSMI.Size = new System.Drawing.Size(202, 26);
+            this.UpdateUndirectedUnweightedГрафTSMI.Text = "Оновити граф";
+            this.UpdateUndirectedUnweightedГрафTSMI.Click += new System.EventHandler(this.UpdateUndirectedUnweightedГрафTSMI_Click);
+            // 
+            // FindCyclesUnd
+            // 
+            this.FindCyclesUnd.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MainMethodUndirectedUnweightedTSMI});
+            this.FindCyclesUnd.Name = "FindCyclesUnd";
+            this.FindCyclesUnd.Size = new System.Drawing.Size(118, 24);
+            this.FindCyclesUnd.Text = "Знайти цикли";
+            // 
+            // MainMethodUndirectedUnweightedTSMI
+            // 
+            this.MainMethodUndirectedUnweightedTSMI.Name = "MainMethodUndirectedUnweightedTSMI";
+            this.MainMethodUndirectedUnweightedTSMI.Size = new System.Drawing.Size(358, 26);
+            this.MainMethodUndirectedUnweightedTSMI.Text = "Що проходять крізь введену вершину";
+            this.MainMethodUndirectedUnweightedTSMI.Click += new System.EventHandler(this.MainMethodUndirectedUnweightedTSMI_Click);
+            // 
+            // ImportGraphUnd
+            // 
+            this.ImportGraphUnd.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ImportGraphUndirectUnweightedTSMI});
+            this.ImportGraphUnd.Name = "ImportGraphUnd";
+            this.ImportGraphUnd.Size = new System.Drawing.Size(146, 24);
+            this.ImportGraphUnd.Text = "Імпортувати граф";
+            // 
+            // ImportGraphUndirectUnweightedTSMI
+            // 
+            this.ImportGraphUndirectUnweightedTSMI.Name = "ImportGraphUndirectUnweightedTSMI";
+            this.ImportGraphUndirectUnweightedTSMI.Size = new System.Drawing.Size(168, 26);
+            this.ImportGraphUndirectUnweightedTSMI.Text = "З txt файла";
+            this.ImportGraphUndirectUnweightedTSMI.Click += new System.EventHandler(this.ImportGraphUndirectUnweightedTSMI_Click);
+            // 
+            // ExportGraphUnd
+            // 
+            this.ExportGraphUnd.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ExportGraphToTxtUndirectedTSMI});
+            this.ExportGraphUnd.Name = "ExportGraphUnd";
+            this.ExportGraphUnd.Size = new System.Drawing.Size(153, 24);
+            this.ExportGraphUnd.Text = "Експортувати граф";
+            // 
+            // ExportGraphToTxtUndirectedTSMI
+            // 
+            this.ExportGraphToTxtUndirectedTSMI.Name = "ExportGraphToTxtUndirectedTSMI";
+            this.ExportGraphToTxtUndirectedTSMI.Size = new System.Drawing.Size(179, 26);
+            this.ExportGraphToTxtUndirectedTSMI.Text = "До txt файла";
+            this.ExportGraphToTxtUndirectedTSMI.Click += new System.EventHandler(this.ExportGraphToTxtUndirectedTSMI_Click);
+            // 
+            // ExportCyclesUnd
+            // 
+            this.ExportCyclesUnd.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ExportCycleToTxtUndirectedTSMI});
+            this.ExportCyclesUnd.Name = "ExportCyclesUnd";
+            this.ExportCyclesUnd.Size = new System.Drawing.Size(162, 24);
+            this.ExportCyclesUnd.Text = "Експортувати цикли";
+            // 
+            // ExportCycleToTxtUndirectedTSMI
+            // 
+            this.ExportCycleToTxtUndirectedTSMI.Name = "ExportCycleToTxtUndirectedTSMI";
+            this.ExportCycleToTxtUndirectedTSMI.Size = new System.Drawing.Size(179, 26);
+            this.ExportCycleToTxtUndirectedTSMI.Text = "До txt файла";
+            this.ExportCycleToTxtUndirectedTSMI.Click += new System.EventHandler(this.ExportCycleToTxtUndirectedTSMI_Click);
             // 
             // DirectedUnweighted
             // 
-            this.DirectedUnweighted.Controls.Add(this.ExportGraphToTxtDirected);
-            this.DirectedUnweighted.Controls.Add(this.ExportCycleToTxtDirected);
-            this.DirectedUnweighted.Controls.Add(this.CreateRandomGraphDirected);
-            this.DirectedUnweighted.Controls.Add(this.ImportGraphDirectUnweighted);
+            this.DirectedUnweighted.Controls.Add(this.DirectGraphSM);
             this.DirectedUnweighted.Controls.Add(this.GraphImageDirectedUnweightedLbl);
             this.DirectedUnweighted.Controls.Add(this.GraphImageDirectedUnweightedPB);
             this.DirectedUnweighted.Controls.Add(this.NumberOfVerticesDirectedUnweightedLbl);
@@ -349,15 +397,11 @@
             this.DirectedUnweighted.Controls.Add(this.VertexNumberDirectedUnweightedTB);
             this.DirectedUnweighted.Controls.Add(this.CyclesDirectedUnweightedLbl);
             this.DirectedUnweighted.Controls.Add(this.PastCyclesDirectedUnweightedLbl);
-            this.DirectedUnweighted.Controls.Add(this.UpdateDirectedUnweighted);
             this.DirectedUnweighted.Controls.Add(this.CyclesDirectedUnweightedLB);
             this.DirectedUnweighted.Controls.Add(this.PastCyclesDirectedUnweightedLB);
-            this.DirectedUnweighted.Controls.Add(this.MainMethodDirectedUnweighted);
             this.DirectedUnweighted.Controls.Add(this.AdjacencyMatrixDirectedUnweightedDGV);
             this.DirectedUnweighted.Controls.Add(this.AdjacencyMatrixDirectedUnweightedLbl);
-            this.DirectedUnweighted.Controls.Add(this.CreateCompleteDirectedUnweighted);
             this.DirectedUnweighted.Controls.Add(this.TimerDirectedUnweightedLbl);
-            this.DirectedUnweighted.Controls.Add(this.CreateEmptyDirectedUnweighted);
             this.DirectedUnweighted.Location = new System.Drawing.Point(4, 34);
             this.DirectedUnweighted.Name = "DirectedUnweighted";
             this.DirectedUnweighted.Padding = new System.Windows.Forms.Padding(3);
@@ -366,28 +410,132 @@
             this.DirectedUnweighted.Text = "Орієнтовний Незважений";
             this.DirectedUnweighted.UseVisualStyleBackColor = true;
             // 
-            // ImportGraphDirectUnweighted
+            // DirectGraphSM
             // 
-            this.ImportGraphDirectUnweighted.Location = new System.Drawing.Point(757, 441);
-            this.ImportGraphDirectUnweighted.Name = "ImportGraphDirectUnweighted";
-            this.ImportGraphDirectUnweighted.Size = new System.Drawing.Size(179, 92);
-            this.ImportGraphDirectUnweighted.TabIndex = 86;
-            this.ImportGraphDirectUnweighted.Text = "Імпортувати граф з txt файла";
-            this.ImportGraphDirectUnweighted.UseVisualStyleBackColor = true;
-            this.ImportGraphDirectUnweighted.Click += new System.EventHandler(this.ImportGraphDirectUnweighted_Click);
+            this.DirectGraphSM.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.DirectGraphSM.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CreateGraph,
+            this.FindCycles,
+            this.ImportGraph,
+            this.ExportGraph,
+            this.ExportCycles});
+            this.DirectGraphSM.Location = new System.Drawing.Point(3, 3);
+            this.DirectGraphSM.Name = "DirectGraphSM";
+            this.DirectGraphSM.Size = new System.Drawing.Size(1514, 30);
+            this.DirectGraphSM.TabIndex = 90;
+            this.DirectGraphSM.Text = "menuStrip2";
+            // 
+            // CreateGraph
+            // 
+            this.CreateGraph.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CreateEmptyDirectedUnweightedTSMI,
+            this.CreateCompleteDirectedUnweightedTSMI,
+            this.CreateRandomGraphDirectedTSMI,
+            this.UpdateDirectedUnweightedГрафTSMI});
+            this.CreateGraph.Name = "CreateGraph";
+            this.CreateGraph.Size = new System.Drawing.Size(152, 24);
+            this.CreateGraph.Text = "Стрворення графа";
+            // 
+            // CreateEmptyDirectedUnweightedTSMI
+            // 
+            this.CreateEmptyDirectedUnweightedTSMI.Name = "CreateEmptyDirectedUnweightedTSMI";
+            this.CreateEmptyDirectedUnweightedTSMI.Size = new System.Drawing.Size(202, 26);
+            this.CreateEmptyDirectedUnweightedTSMI.Text = "Незаповненого";
+            this.CreateEmptyDirectedUnweightedTSMI.Click += new System.EventHandler(this.CreateEmptyDirectedUnweightedTSMI_Click);
+            // 
+            // CreateCompleteDirectedUnweightedTSMI
+            // 
+            this.CreateCompleteDirectedUnweightedTSMI.Name = "CreateCompleteDirectedUnweightedTSMI";
+            this.CreateCompleteDirectedUnweightedTSMI.Size = new System.Drawing.Size(202, 26);
+            this.CreateCompleteDirectedUnweightedTSMI.Text = "Повного";
+            this.CreateCompleteDirectedUnweightedTSMI.Click += new System.EventHandler(this.CreateCompleteDirectedUnweightedTSMI_Click);
+            // 
+            // CreateRandomGraphDirectedTSMI
+            // 
+            this.CreateRandomGraphDirectedTSMI.Name = "CreateRandomGraphDirectedTSMI";
+            this.CreateRandomGraphDirectedTSMI.Size = new System.Drawing.Size(202, 26);
+            this.CreateRandomGraphDirectedTSMI.Text = "Випадково";
+            this.CreateRandomGraphDirectedTSMI.Click += new System.EventHandler(this.CreateRandomGraphDirectedTSMI_Click);
+            // 
+            // UpdateDirectedUnweightedГрафTSMI
+            // 
+            this.UpdateDirectedUnweightedГрафTSMI.Name = "UpdateDirectedUnweightedГрафTSMI";
+            this.UpdateDirectedUnweightedГрафTSMI.Size = new System.Drawing.Size(202, 26);
+            this.UpdateDirectedUnweightedГрафTSMI.Text = "Оновити граф";
+            this.UpdateDirectedUnweightedГрафTSMI.Click += new System.EventHandler(this.UpdateDirectedUnweightedГрафTSMI_Click);
+            // 
+            // FindCycles
+            // 
+            this.FindCycles.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MainMethodDirectedUnweightedTSMI});
+            this.FindCycles.Name = "FindCycles";
+            this.FindCycles.Size = new System.Drawing.Size(118, 24);
+            this.FindCycles.Text = "Знайти цикли";
+            // 
+            // MainMethodDirectedUnweightedTSMI
+            // 
+            this.MainMethodDirectedUnweightedTSMI.Name = "MainMethodDirectedUnweightedTSMI";
+            this.MainMethodDirectedUnweightedTSMI.Size = new System.Drawing.Size(358, 26);
+            this.MainMethodDirectedUnweightedTSMI.Text = "Що проходять крізь введену вершину";
+            this.MainMethodDirectedUnweightedTSMI.Click += new System.EventHandler(this.MainMethodDirectedUnweightedTSMI_Click);
+            // 
+            // ImportGraph
+            // 
+            this.ImportGraph.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ImportGraphDirectUnweightedTSMI});
+            this.ImportGraph.Name = "ImportGraph";
+            this.ImportGraph.Size = new System.Drawing.Size(146, 24);
+            this.ImportGraph.Text = "Імпортувати граф";
+            // 
+            // ImportGraphDirectUnweightedTSMI
+            // 
+            this.ImportGraphDirectUnweightedTSMI.Name = "ImportGraphDirectUnweightedTSMI";
+            this.ImportGraphDirectUnweightedTSMI.Size = new System.Drawing.Size(168, 26);
+            this.ImportGraphDirectUnweightedTSMI.Text = "З txt файла";
+            this.ImportGraphDirectUnweightedTSMI.Click += new System.EventHandler(this.ImportGraphDirectUnweightedTSMI_Click);
+            // 
+            // ExportGraph
+            // 
+            this.ExportGraph.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ExportGraphToTxtDirectedTSMI});
+            this.ExportGraph.Name = "ExportGraph";
+            this.ExportGraph.Size = new System.Drawing.Size(153, 24);
+            this.ExportGraph.Text = "Експортувати граф";
+            // 
+            // ExportGraphToTxtDirectedTSMI
+            // 
+            this.ExportGraphToTxtDirectedTSMI.Name = "ExportGraphToTxtDirectedTSMI";
+            this.ExportGraphToTxtDirectedTSMI.Size = new System.Drawing.Size(179, 26);
+            this.ExportGraphToTxtDirectedTSMI.Text = "До txt файла";
+            this.ExportGraphToTxtDirectedTSMI.Click += new System.EventHandler(this.ExportGraphToTxtDirectedTSMI_Click);
+            // 
+            // ExportCycles
+            // 
+            this.ExportCycles.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ExportCycleToTxtDirectedTSMI});
+            this.ExportCycles.Name = "ExportCycles";
+            this.ExportCycles.Size = new System.Drawing.Size(162, 24);
+            this.ExportCycles.Text = "Експортувати цикли";
+            // 
+            // ExportCycleToTxtDirectedTSMI
+            // 
+            this.ExportCycleToTxtDirectedTSMI.Name = "ExportCycleToTxtDirectedTSMI";
+            this.ExportCycleToTxtDirectedTSMI.Size = new System.Drawing.Size(179, 26);
+            this.ExportCycleToTxtDirectedTSMI.Text = "До txt файла";
+            this.ExportCycleToTxtDirectedTSMI.Click += new System.EventHandler(this.ExportCycleToTxtDirectedTSMI_Click);
             // 
             // GraphImageDirectedUnweightedLbl
             // 
             this.GraphImageDirectedUnweightedLbl.AutoSize = true;
-            this.GraphImageDirectedUnweightedLbl.Location = new System.Drawing.Point(1251, 6);
+            this.GraphImageDirectedUnweightedLbl.Location = new System.Drawing.Point(1249, 15);
             this.GraphImageDirectedUnweightedLbl.Name = "GraphImageDirectedUnweightedLbl";
             this.GraphImageDirectedUnweightedLbl.Size = new System.Drawing.Size(191, 25);
-            this.GraphImageDirectedUnweightedLbl.TabIndex = 80;
+            this.GraphImageDirectedUnweightedLbl.TabIndex = 91;
             this.GraphImageDirectedUnweightedLbl.Text = "Зображення графу";
             // 
             // GraphImageDirectedUnweightedPB
             // 
-            this.GraphImageDirectedUnweightedPB.Location = new System.Drawing.Point(1166, 34);
+            this.GraphImageDirectedUnweightedPB.Location = new System.Drawing.Point(1171, 43);
             this.GraphImageDirectedUnweightedPB.Name = "GraphImageDirectedUnweightedPB";
             this.GraphImageDirectedUnweightedPB.Size = new System.Drawing.Size(350, 350);
             this.GraphImageDirectedUnweightedPB.TabIndex = 79;
@@ -396,7 +544,7 @@
             // NumberOfVerticesDirectedUnweightedLbl
             // 
             this.NumberOfVerticesDirectedUnweightedLbl.AutoSize = true;
-            this.NumberOfVerticesDirectedUnweightedLbl.Location = new System.Drawing.Point(9, 6);
+            this.NumberOfVerticesDirectedUnweightedLbl.Location = new System.Drawing.Point(64, 60);
             this.NumberOfVerticesDirectedUnweightedLbl.Name = "NumberOfVerticesDirectedUnweightedLbl";
             this.NumberOfVerticesDirectedUnweightedLbl.Size = new System.Drawing.Size(171, 25);
             this.NumberOfVerticesDirectedUnweightedLbl.TabIndex = 68;
@@ -405,7 +553,7 @@
             // PastGraphImageDirectedUnweightedLbl
             // 
             this.PastGraphImageDirectedUnweightedLbl.AutoSize = true;
-            this.PastGraphImageDirectedUnweightedLbl.Location = new System.Drawing.Point(1269, 387);
+            this.PastGraphImageDirectedUnweightedLbl.Location = new System.Drawing.Point(1282, 392);
             this.PastGraphImageDirectedUnweightedLbl.Name = "PastGraphImageDirectedUnweightedLbl";
             this.PastGraphImageDirectedUnweightedLbl.Size = new System.Drawing.Size(146, 25);
             this.PastGraphImageDirectedUnweightedLbl.TabIndex = 83;
@@ -413,7 +561,7 @@
             // 
             // PastGraphImageDirectedUnweightedPB
             // 
-            this.PastGraphImageDirectedUnweightedPB.Location = new System.Drawing.Point(1159, 412);
+            this.PastGraphImageDirectedUnweightedPB.Location = new System.Drawing.Point(1170, 417);
             this.PastGraphImageDirectedUnweightedPB.Name = "PastGraphImageDirectedUnweightedPB";
             this.PastGraphImageDirectedUnweightedPB.Size = new System.Drawing.Size(350, 350);
             this.PastGraphImageDirectedUnweightedPB.TabIndex = 81;
@@ -421,7 +569,7 @@
             // 
             // NumberOfVerticesDirectedUnweightedTB
             // 
-            this.NumberOfVerticesDirectedUnweightedTB.Location = new System.Drawing.Point(42, 34);
+            this.NumberOfVerticesDirectedUnweightedTB.Location = new System.Drawing.Point(100, 108);
             this.NumberOfVerticesDirectedUnweightedTB.Name = "NumberOfVerticesDirectedUnweightedTB";
             this.NumberOfVerticesDirectedUnweightedTB.Size = new System.Drawing.Size(100, 30);
             this.NumberOfVerticesDirectedUnweightedTB.TabIndex = 70;
@@ -429,7 +577,7 @@
             // VertexNumberDirectedUnweightedLbl
             // 
             this.VertexNumberDirectedUnweightedLbl.AutoSize = true;
-            this.VertexNumberDirectedUnweightedLbl.Location = new System.Drawing.Point(233, 6);
+            this.VertexNumberDirectedUnweightedLbl.Location = new System.Drawing.Point(353, 60);
             this.VertexNumberDirectedUnweightedLbl.Name = "VertexNumberDirectedUnweightedLbl";
             this.VertexNumberDirectedUnweightedLbl.Size = new System.Drawing.Size(161, 25);
             this.VertexNumberDirectedUnweightedLbl.TabIndex = 73;
@@ -437,7 +585,7 @@
             // 
             // VertexNumberDirectedUnweightedTB
             // 
-            this.VertexNumberDirectedUnweightedTB.Location = new System.Drawing.Point(266, 34);
+            this.VertexNumberDirectedUnweightedTB.Location = new System.Drawing.Point(378, 108);
             this.VertexNumberDirectedUnweightedTB.Name = "VertexNumberDirectedUnweightedTB";
             this.VertexNumberDirectedUnweightedTB.Size = new System.Drawing.Size(100, 30);
             this.VertexNumberDirectedUnweightedTB.TabIndex = 78;
@@ -445,7 +593,7 @@
             // CyclesDirectedUnweightedLbl
             // 
             this.CyclesDirectedUnweightedLbl.AutoSize = true;
-            this.CyclesDirectedUnweightedLbl.Location = new System.Drawing.Point(5, 106);
+            this.CyclesDirectedUnweightedLbl.Location = new System.Drawing.Point(8, 165);
             this.CyclesDirectedUnweightedLbl.Name = "CyclesDirectedUnweightedLbl";
             this.CyclesDirectedUnweightedLbl.Size = new System.Drawing.Size(318, 25);
             this.CyclesDirectedUnweightedLbl.TabIndex = 76;
@@ -454,27 +602,17 @@
             // PastCyclesDirectedUnweightedLbl
             // 
             this.PastCyclesDirectedUnweightedLbl.AutoSize = true;
-            this.PastCyclesDirectedUnweightedLbl.Location = new System.Drawing.Point(352, 106);
+            this.PastCyclesDirectedUnweightedLbl.Location = new System.Drawing.Point(363, 165);
             this.PastCyclesDirectedUnweightedLbl.Name = "PastCyclesDirectedUnweightedLbl";
             this.PastCyclesDirectedUnweightedLbl.Size = new System.Drawing.Size(136, 25);
             this.PastCyclesDirectedUnweightedLbl.TabIndex = 84;
             this.PastCyclesDirectedUnweightedLbl.Text = "Минулі цикли";
             // 
-            // UpdateDirectedUnweighted
-            // 
-            this.UpdateDirectedUnweighted.Location = new System.Drawing.Point(384, 637);
-            this.UpdateDirectedUnweighted.Name = "UpdateDirectedUnweighted";
-            this.UpdateDirectedUnweighted.Size = new System.Drawing.Size(179, 92);
-            this.UpdateDirectedUnweighted.TabIndex = 85;
-            this.UpdateDirectedUnweighted.Text = "Оновити граф";
-            this.UpdateDirectedUnweighted.UseVisualStyleBackColor = true;
-            this.UpdateDirectedUnweighted.Click += new System.EventHandler(this.UpdateDirectedUnweighted_Click);
-            // 
             // CyclesDirectedUnweightedLB
             // 
             this.CyclesDirectedUnweightedLB.FormattingEnabled = true;
             this.CyclesDirectedUnweightedLB.ItemHeight = 25;
-            this.CyclesDirectedUnweightedLB.Location = new System.Drawing.Point(27, 149);
+            this.CyclesDirectedUnweightedLB.Location = new System.Drawing.Point(69, 208);
             this.CyclesDirectedUnweightedLB.Name = "CyclesDirectedUnweightedLB";
             this.CyclesDirectedUnweightedLB.Size = new System.Drawing.Size(166, 379);
             this.CyclesDirectedUnweightedLB.TabIndex = 75;
@@ -483,25 +621,15 @@
             // 
             this.PastCyclesDirectedUnweightedLB.FormattingEnabled = true;
             this.PastCyclesDirectedUnweightedLB.ItemHeight = 25;
-            this.PastCyclesDirectedUnweightedLB.Location = new System.Drawing.Point(323, 149);
+            this.PastCyclesDirectedUnweightedLB.Location = new System.Drawing.Point(349, 208);
             this.PastCyclesDirectedUnweightedLB.Name = "PastCyclesDirectedUnweightedLB";
             this.PastCyclesDirectedUnweightedLB.Size = new System.Drawing.Size(165, 379);
             this.PastCyclesDirectedUnweightedLB.TabIndex = 82;
             // 
-            // MainMethodDirectedUnweighted
-            // 
-            this.MainMethodDirectedUnweighted.Location = new System.Drawing.Point(942, 637);
-            this.MainMethodDirectedUnweighted.Name = "MainMethodDirectedUnweighted";
-            this.MainMethodDirectedUnweighted.Size = new System.Drawing.Size(179, 92);
-            this.MainMethodDirectedUnweighted.TabIndex = 72;
-            this.MainMethodDirectedUnweighted.Text = "Знайти цикли, яким належить вершина";
-            this.MainMethodDirectedUnweighted.UseVisualStyleBackColor = true;
-            this.MainMethodDirectedUnweighted.Click += new System.EventHandler(this.MainMethodDirectedUnweighted_Click);
-            // 
             // AdjacencyMatrixDirectedUnweightedDGV
             // 
             this.AdjacencyMatrixDirectedUnweightedDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AdjacencyMatrixDirectedUnweightedDGV.Location = new System.Drawing.Point(569, 34);
+            this.AdjacencyMatrixDirectedUnweightedDGV.Location = new System.Drawing.Point(578, 108);
             this.AdjacencyMatrixDirectedUnweightedDGV.Name = "AdjacencyMatrixDirectedUnweightedDGV";
             this.AdjacencyMatrixDirectedUnweightedDGV.RowHeadersWidth = 51;
             this.AdjacencyMatrixDirectedUnweightedDGV.RowTemplate.Height = 24;
@@ -511,84 +639,24 @@
             // AdjacencyMatrixDirectedUnweightedLbl
             // 
             this.AdjacencyMatrixDirectedUnweightedLbl.AutoSize = true;
-            this.AdjacencyMatrixDirectedUnweightedLbl.Location = new System.Drawing.Point(731, 6);
+            this.AdjacencyMatrixDirectedUnweightedLbl.Location = new System.Drawing.Point(741, 60);
             this.AdjacencyMatrixDirectedUnweightedLbl.Name = "AdjacencyMatrixDirectedUnweightedLbl";
             this.AdjacencyMatrixDirectedUnweightedLbl.Size = new System.Drawing.Size(205, 25);
             this.AdjacencyMatrixDirectedUnweightedLbl.TabIndex = 69;
             this.AdjacencyMatrixDirectedUnweightedLbl.Text = "Матриця суміжності";
             // 
-            // CreateCompleteDirectedUnweighted
-            // 
-            this.CreateCompleteDirectedUnweighted.Location = new System.Drawing.Point(199, 637);
-            this.CreateCompleteDirectedUnweighted.Name = "CreateCompleteDirectedUnweighted";
-            this.CreateCompleteDirectedUnweighted.Size = new System.Drawing.Size(179, 92);
-            this.CreateCompleteDirectedUnweighted.TabIndex = 74;
-            this.CreateCompleteDirectedUnweighted.Text = "Створення повного графу";
-            this.CreateCompleteDirectedUnweighted.UseVisualStyleBackColor = true;
-            this.CreateCompleteDirectedUnweighted.Click += new System.EventHandler(this.CreateCompleteDirectedUnweighted_Click);
-            // 
             // TimerDirectedUnweightedLbl
             // 
             this.TimerDirectedUnweightedLbl.AutoSize = true;
-            this.TimerDirectedUnweightedLbl.Location = new System.Drawing.Point(22, 573);
+            this.TimerDirectedUnweightedLbl.Location = new System.Drawing.Point(8, 651);
             this.TimerDirectedUnweightedLbl.Name = "TimerDirectedUnweightedLbl";
             this.TimerDirectedUnweightedLbl.Size = new System.Drawing.Size(252, 25);
             this.TimerDirectedUnweightedLbl.TabIndex = 77;
             this.TimerDirectedUnweightedLbl.Text = "Час виконання програми: ";
             // 
-            // CreateEmptyDirectedUnweighted
-            // 
-            this.CreateEmptyDirectedUnweighted.Location = new System.Drawing.Point(14, 637);
-            this.CreateEmptyDirectedUnweighted.Name = "CreateEmptyDirectedUnweighted";
-            this.CreateEmptyDirectedUnweighted.Size = new System.Drawing.Size(179, 92);
-            this.CreateEmptyDirectedUnweighted.TabIndex = 67;
-            this.CreateEmptyDirectedUnweighted.Text = "Створення незаповненого графу";
-            this.CreateEmptyDirectedUnweighted.UseVisualStyleBackColor = true;
-            this.CreateEmptyDirectedUnweighted.Click += new System.EventHandler(this.CreateEmptyDirectedUnweighted_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // CreateRandomGraphUndirected
-            // 
-            this.CreateRandomGraphUndirected.Location = new System.Drawing.Point(570, 641);
-            this.CreateRandomGraphUndirected.Name = "CreateRandomGraphUndirected";
-            this.CreateRandomGraphUndirected.Size = new System.Drawing.Size(179, 92);
-            this.CreateRandomGraphUndirected.TabIndex = 70;
-            this.CreateRandomGraphUndirected.Text = "Створення випадкового графу";
-            this.CreateRandomGraphUndirected.UseVisualStyleBackColor = true;
-            this.CreateRandomGraphUndirected.Click += new System.EventHandler(this.CreateRandomGraphUndirected_Click);
-            // 
-            // CreateRandomGraphDirected
-            // 
-            this.CreateRandomGraphDirected.Location = new System.Drawing.Point(572, 637);
-            this.CreateRandomGraphDirected.Name = "CreateRandomGraphDirected";
-            this.CreateRandomGraphDirected.Size = new System.Drawing.Size(179, 92);
-            this.CreateRandomGraphDirected.TabIndex = 87;
-            this.CreateRandomGraphDirected.Text = "Створення випадкового графу";
-            this.CreateRandomGraphDirected.UseVisualStyleBackColor = true;
-            this.CreateRandomGraphDirected.Click += new System.EventHandler(this.CreateRandomGraphDirected_Click);
-            // 
-            // ExportCycleToTxtDirected
-            // 
-            this.ExportCycleToTxtDirected.Location = new System.Drawing.Point(757, 539);
-            this.ExportCycleToTxtDirected.Name = "ExportCycleToTxtDirected";
-            this.ExportCycleToTxtDirected.Size = new System.Drawing.Size(179, 92);
-            this.ExportCycleToTxtDirected.TabIndex = 88;
-            this.ExportCycleToTxtDirected.Text = "Експорувати цикло до txt файлу";
-            this.ExportCycleToTxtDirected.UseVisualStyleBackColor = true;
-            this.ExportCycleToTxtDirected.Click += new System.EventHandler(this.ExportCycleToTxtDirected_Click);
-            // 
-            // ExportGraphToTxtDirected
-            // 
-            this.ExportGraphToTxtDirected.Location = new System.Drawing.Point(757, 637);
-            this.ExportGraphToTxtDirected.Name = "ExportGraphToTxtDirected";
-            this.ExportGraphToTxtDirected.Size = new System.Drawing.Size(179, 92);
-            this.ExportGraphToTxtDirected.TabIndex = 89;
-            this.ExportGraphToTxtDirected.Text = "Експорувати граф до txt файлу";
-            this.ExportGraphToTxtDirected.UseVisualStyleBackColor = true;
-            this.ExportGraphToTxtDirected.Click += new System.EventHandler(this.ExportGraphToTxtDirected_Click);
             // 
             // Form1
             // 
@@ -597,19 +665,25 @@
             this.ClientSize = new System.Drawing.Size(1526, 802);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MainMenuStrip = this.UndirectGraphMS;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Курсова робота";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.UndirectedUnweighted.ResumeLayout(false);
             this.UndirectedUnweighted.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GraphImageUndirectedUnweightedPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PastGraphImageUndirectedUnweightedPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AdjacencyMatrixUndirectedUnweightedDGV)).EndInit();
+            this.UndirectGraphMS.ResumeLayout(false);
+            this.UndirectGraphMS.PerformLayout();
             this.DirectedUnweighted.ResumeLayout(false);
             this.DirectedUnweighted.PerformLayout();
+            this.DirectGraphSM.ResumeLayout(false);
+            this.DirectGraphSM.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GraphImageDirectedUnweightedPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PastGraphImageDirectedUnweightedPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AdjacencyMatrixDirectedUnweightedDGV)).EndInit();
@@ -623,7 +697,6 @@
         private System.Windows.Forms.TabPage UndirectedUnweighted;
         private System.Windows.Forms.TabPage DirectedUnweighted;
         private System.Windows.Forms.PictureBox GraphImageUndirectedUnweightedPB;
-        private System.Windows.Forms.Button UpdateUndirectedUnweighted;
         private System.Windows.Forms.Label PastCyclesUndirectedUnweightedLbl;
         private System.Windows.Forms.Label PastGraphImageUndirectedUnweightedLbl;
         private System.Windows.Forms.ListBox PastCyclesUndirectedUnweightedLB;
@@ -633,14 +706,11 @@
         private System.Windows.Forms.Label TimerUndirectedUnweightedLbl;
         private System.Windows.Forms.Label CyclesUndirectedUnweightedLbl;
         private System.Windows.Forms.ListBox CyclesUndirectedUnweightedLB;
-        private System.Windows.Forms.Button CreateCompleteUndirectedUnweighted;
         private System.Windows.Forms.Label VertexNumberUndirectedUnweightedLbl;
-        private System.Windows.Forms.Button MainMethodUndirectedUnweighted;
         private System.Windows.Forms.DataGridView AdjacencyMatrixUndirectedUnweightedDGV;
         private System.Windows.Forms.TextBox NumberOfVerticesUndirectedUnweightedTB;
         private System.Windows.Forms.Label AdjacencyMatrixUndirectedUnweightedLbl;
         private System.Windows.Forms.Label NumberOfVerticesUndirectedUnweightedLbl;
-        private System.Windows.Forms.Button CreateEmptyUndirectedUnweighted;
         private System.Windows.Forms.Label GraphImageDirectedUnweightedLbl;
         private System.Windows.Forms.PictureBox GraphImageDirectedUnweightedPB;
         private System.Windows.Forms.Label NumberOfVerticesDirectedUnweightedLbl;
@@ -651,25 +721,41 @@
         private System.Windows.Forms.TextBox VertexNumberDirectedUnweightedTB;
         private System.Windows.Forms.Label CyclesDirectedUnweightedLbl;
         private System.Windows.Forms.Label PastCyclesDirectedUnweightedLbl;
-        private System.Windows.Forms.Button UpdateDirectedUnweighted;
         private System.Windows.Forms.ListBox CyclesDirectedUnweightedLB;
         private System.Windows.Forms.ListBox PastCyclesDirectedUnweightedLB;
-        private System.Windows.Forms.Button MainMethodDirectedUnweighted;
         private System.Windows.Forms.DataGridView AdjacencyMatrixDirectedUnweightedDGV;
         private System.Windows.Forms.Label AdjacencyMatrixDirectedUnweightedLbl;
-        private System.Windows.Forms.Button CreateCompleteDirectedUnweighted;
         private System.Windows.Forms.Label TimerDirectedUnweightedLbl;
-        private System.Windows.Forms.Button CreateEmptyDirectedUnweighted;
-        private System.Windows.Forms.Button ImportGraphUndirectUnweighted;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button ImportGraphDirectUnweighted;
-        private System.Windows.Forms.Button ExportCycleToTxtUndirected;
-        private System.Windows.Forms.Button ExportGraphToTxtUndirected;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.Button CreateRandomGraphUndirected;
-        private System.Windows.Forms.Button ExportGraphToTxtDirected;
-        private System.Windows.Forms.Button ExportCycleToTxtDirected;
-        private System.Windows.Forms.Button CreateRandomGraphDirected;
+        private System.Windows.Forms.MenuStrip UndirectGraphMS;
+        private System.Windows.Forms.ToolStripMenuItem CreateGraphUnd;
+        private System.Windows.Forms.ToolStripMenuItem CreateEmptyUndirectedUnweightedTSMI;
+        private System.Windows.Forms.ToolStripMenuItem CreateCompleteUndirectedUnweightedTSMI;
+        private System.Windows.Forms.ToolStripMenuItem CreateRandomGraphUndirectedTSMI;
+        private System.Windows.Forms.ToolStripMenuItem UpdateUndirectedUnweightedГрафTSMI;
+        private System.Windows.Forms.ToolStripMenuItem FindCyclesUnd;
+        private System.Windows.Forms.ToolStripMenuItem MainMethodUndirectedUnweightedTSMI;
+        private System.Windows.Forms.ToolStripMenuItem ImportGraphUnd;
+        private System.Windows.Forms.ToolStripMenuItem ImportGraphUndirectUnweightedTSMI;
+        private System.Windows.Forms.ToolStripMenuItem ExportGraphUnd;
+        private System.Windows.Forms.ToolStripMenuItem ExportGraphToTxtUndirectedTSMI;
+        private System.Windows.Forms.ToolStripMenuItem ExportCyclesUnd;
+        private System.Windows.Forms.ToolStripMenuItem ExportCycleToTxtUndirectedTSMI;
+        private System.Windows.Forms.MenuStrip DirectGraphSM;
+        private System.Windows.Forms.ToolStripMenuItem CreateGraph;
+        private System.Windows.Forms.ToolStripMenuItem CreateEmptyDirectedUnweightedTSMI;
+        private System.Windows.Forms.ToolStripMenuItem CreateCompleteDirectedUnweightedTSMI;
+        private System.Windows.Forms.ToolStripMenuItem CreateRandomGraphDirectedTSMI;
+        private System.Windows.Forms.ToolStripMenuItem UpdateDirectedUnweightedГрафTSMI;
+        private System.Windows.Forms.ToolStripMenuItem FindCycles;
+        private System.Windows.Forms.ToolStripMenuItem MainMethodDirectedUnweightedTSMI;
+        private System.Windows.Forms.ToolStripMenuItem ImportGraph;
+        private System.Windows.Forms.ToolStripMenuItem ImportGraphDirectUnweightedTSMI;
+        private System.Windows.Forms.ToolStripMenuItem ExportGraph;
+        private System.Windows.Forms.ToolStripMenuItem ExportGraphToTxtDirectedTSMI;
+        private System.Windows.Forms.ToolStripMenuItem ExportCycles;
+        private System.Windows.Forms.ToolStripMenuItem ExportCycleToTxtDirectedTSMI;
     }
 }
 

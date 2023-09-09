@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace Курсова_робота.ExportCycle
+namespace Випускна_робота.ExportCycle
 {
     internal interface IExportableCycle
     {

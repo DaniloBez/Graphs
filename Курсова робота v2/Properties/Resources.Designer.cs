@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Курсова_робота.Properties {
+namespace Випускна_робота.Properties {
     using System;
     
     

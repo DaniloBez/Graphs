@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Курсова_робота.ImportGraph
+namespace Випускна_робота.ImportGraph
 {
     internal interface IGraphImporter
     {

@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Курсова_робота.ExportGraph
+namespace Випускна_робота.ExportGraph
 {
     internal interface IExportableGraph
     {
